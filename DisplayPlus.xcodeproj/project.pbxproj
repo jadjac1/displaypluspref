@@ -12,12 +12,18 @@
 		3DA3FAA510682D190063AF68 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA3FAA410682D190063AF68 /* Carbon.framework */; };
 		3DA3FAAB10682D5B0063AF68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
 		3DA3FAC5106833620063AF68 /* DisplayPlusCarbonUtility in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DA3FA7510682B120063AF68 /* DisplayPlusCarbonUtility */; };
+		3DC3DCED106926FA00C80EDB /* FlippedNSView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC3DCEB106926FA00C80EDB /* FlippedNSView.h */; };
+		3DC3DCEE106926FA00C80EDB /* FlippedNSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3DCEC106926FA00C80EDB /* FlippedNSView.m */; };
+		3DC3DD1A1069303000C80EDB /* FlippedNSBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC3DD181069303000C80EDB /* FlippedNSBox.h */; };
+		3DC3DD1B1069303000C80EDB /* FlippedNSBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3DD191069303000C80EDB /* FlippedNSBox.m */; };
+		3DC3DD8F106935F600C80EDB /* enabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3DC3DD8D106935F600C80EDB /* enabled.tiff */; };
+		3DC3DD90106935F600C80EDB /* disabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3DC3DD8E106935F600C80EDB /* disabled.tiff */; };
 		8D202CEA0486D31800D8A456 /* DisplayPlus_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCFA20370C41700C91783 /* DisplayPlus_Prefix.pch */; };
 		8D202CEB0486D31800D8A456 /* DisplayPlusPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F506C03C013D9D7901CA16C8 /* DisplayPlusPref.h */; };
 		8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D202CEE0486D31800D8A456 /* DisplayPlusPref.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F506C040013D9D8001CA16C8 /* DisplayPlusPref.tiff */; };
 		8D202CEF0486D31800D8A456 /* DisplayPlusPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = F506C042013D9D8C01CA16C8 /* DisplayPlusPref.xib */; };
-		8D202CF10486D31800D8A456 /* DisplayPlusPref.m in Sources */ = {isa = PBXBuildFile; fileRef = F506C03D013D9D7901CA16C8 /* DisplayPlusPref.m */; };
+		8D202CF10486D31800D8A456 /* DisplayPlusPref.mm in Sources */ = {isa = PBXBuildFile; fileRef = F506C03D013D9D7901CA16C8 /* DisplayPlusPref.mm */; };
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
 /* End PBXBuildFile section */
@@ -55,11 +61,17 @@
 		3DA3FA8410682BEC0063AF68 /* DisplayPlusCommandLine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DisplayPlusCommandLine.mm; sourceTree = "<group>"; };
 		3DA3FA8E10682C270063AF68 /* DisplayPlusCommandLine_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayPlusCommandLine_Prefix.pch; sourceTree = "<group>"; };
 		3DA3FAA410682D190063AF68 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		3DC3DCEB106926FA00C80EDB /* FlippedNSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedNSView.h; sourceTree = "<group>"; };
+		3DC3DCEC106926FA00C80EDB /* FlippedNSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedNSView.m; sourceTree = "<group>"; };
+		3DC3DD181069303000C80EDB /* FlippedNSBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedNSBox.h; sourceTree = "<group>"; };
+		3DC3DD191069303000C80EDB /* FlippedNSBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedNSBox.m; sourceTree = "<group>"; };
+		3DC3DD8D106935F600C80EDB /* enabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = enabled.tiff; sourceTree = "<group>"; };
+		3DC3DD8E106935F600C80EDB /* disabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = disabled.tiff; sourceTree = "<group>"; };
 		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* DisplayPlus.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayPlus.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
 		F506C03C013D9D7901CA16C8 /* DisplayPlusPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayPlusPref.h; sourceTree = "<group>"; };
-		F506C03D013D9D7901CA16C8 /* DisplayPlusPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayPlusPref.m; sourceTree = "<group>"; };
+		F506C03D013D9D7901CA16C8 /* DisplayPlusPref.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DisplayPlusPref.mm; sourceTree = "<group>"; };
 		F506C040013D9D8001CA16C8 /* DisplayPlusPref.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = DisplayPlusPref.tiff; sourceTree = "<group>"; };
 		F506C043013D9D8C01CA16C8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/DisplayPlusPref.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +122,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3DC3DD89106935DE00C80EDB /* Images */,
 				8D202CF70486D31800D8A456 /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 				F506C040013D9D8001CA16C8 /* DisplayPlusPref.tiff */,
@@ -176,9 +189,22 @@
 			isa = PBXGroup;
 			children = (
 				F506C03C013D9D7901CA16C8 /* DisplayPlusPref.h */,
-				F506C03D013D9D7901CA16C8 /* DisplayPlusPref.m */,
+				F506C03D013D9D7901CA16C8 /* DisplayPlusPref.mm */,
+				3DC3DCEB106926FA00C80EDB /* FlippedNSView.h */,
+				3DC3DCEC106926FA00C80EDB /* FlippedNSView.m */,
+				3DC3DD181069303000C80EDB /* FlippedNSBox.h */,
+				3DC3DD191069303000C80EDB /* FlippedNSBox.m */,
 			);
 			name = PrefPane;
+			sourceTree = "<group>";
+		};
+		3DC3DD89106935DE00C80EDB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3DC3DD8D106935F600C80EDB /* enabled.tiff */,
+				3DC3DD8E106935F600C80EDB /* disabled.tiff */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +224,8 @@
 			files = (
 				8D202CEA0486D31800D8A456 /* DisplayPlus_Prefix.pch in Headers */,
 				8D202CEB0486D31800D8A456 /* DisplayPlusPref.h in Headers */,
+				3DC3DCED106926FA00C80EDB /* FlippedNSView.h in Headers */,
+				3DC3DD1A1069303000C80EDB /* FlippedNSBox.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +297,8 @@
 				8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */,
 				8D202CEE0486D31800D8A456 /* DisplayPlusPref.tiff in Resources */,
 				8D202CEF0486D31800D8A456 /* DisplayPlusPref.xib in Resources */,
+				3DC3DD8F106935F600C80EDB /* enabled.tiff in Resources */,
+				3DC3DD90106935F600C80EDB /* disabled.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +327,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D202CF10486D31800D8A456 /* DisplayPlusPref.m in Sources */,
+				8D202CF10486D31800D8A456 /* DisplayPlusPref.mm in Sources */,
+				3DC3DCEE106926FA00C80EDB /* FlippedNSView.m in Sources */,
+				3DC3DD1B1069303000C80EDB /* FlippedNSBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

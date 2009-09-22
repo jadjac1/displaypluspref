@@ -7,18 +7,31 @@
 //
 
 #import <PreferencePanes/PreferencePanes.h>
+#import "FlippedNSView.h"
+#import "FlippedNSBox.h"
 
 
 @interface DisplayPlusPref : NSPreferencePane 
 {
 
-	IBOutlet NSScrollView* theScrollView;
+	IBOutlet NSButton*		theDisplayPreferencesButton;
+	IBOutlet NSScrollView*	theScrollView;
+	
+	FlippedNSView*					viewToScroll;
+	//NSClipView*				theClipView;
+	
+	uint32_t*				theDisplaySerials;
+	CGDisplayCount			displayCount;
+	
+	NSMutableArray*			buttonList;
+	
 	
 }
 
 - (void) mainViewDidLoad;
 - (void) refreshInterface;
+- (void) handleButton:(id)sender;
 
-@property (nonatomic, retain) NSScrollView* theScrollView;
+//@property (nonatomic, retain) NSScrollView* theScrollView;
 
 @end
