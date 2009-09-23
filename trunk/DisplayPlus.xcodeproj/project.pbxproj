@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D26761C106A807B004F6C66 /* MonitorInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D26761B106A807B004F6C66 /* MonitorInfoView.xib */; };
+		3D267623106A818D004F6C66 /* MonitorInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D267621106A818D004F6C66 /* MonitorInfoView.h */; };
+		3D267624106A818D004F6C66 /* MonitorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D267622106A818D004F6C66 /* MonitorInfoView.m */; };
+		3D267627106A8497004F6C66 /* CinemaDisplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D267626106A8497004F6C66 /* CinemaDisplay.png */; };
 		3DA3FA8510682BEC0063AF68 /* DisplayPlusCommandLine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3FA8410682BEC0063AF68 /* DisplayPlusCommandLine.mm */; };
 		3DA3FA9610682C540063AF68 /* DisplayPlusCommandLine_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 3DA3FA8E10682C270063AF68 /* DisplayPlusCommandLine_Prefix.pch */; };
 		3DA3FAA510682D190063AF68 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA3FAA410682D190063AF68 /* Carbon.framework */; };
@@ -57,6 +61,10 @@
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCFA20370C41700C91783 /* DisplayPlus_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayPlus_Prefix.pch; sourceTree = "<group>"; };
+		3D26761B106A807B004F6C66 /* MonitorInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonitorInfoView.xib; sourceTree = "<group>"; };
+		3D267621106A818D004F6C66 /* MonitorInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorInfoView.h; sourceTree = "<group>"; };
+		3D267622106A818D004F6C66 /* MonitorInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorInfoView.m; sourceTree = "<group>"; };
+		3D267626106A8497004F6C66 /* CinemaDisplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CinemaDisplay.png; sourceTree = "<group>"; };
 		3DA3FA7510682B120063AF68 /* DisplayPlusCarbonUtility */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DisplayPlusCarbonUtility; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA3FA8410682BEC0063AF68 /* DisplayPlusCommandLine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DisplayPlusCommandLine.mm; sourceTree = "<group>"; };
 		3DA3FA8E10682C270063AF68 /* DisplayPlusCommandLine_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayPlusCommandLine_Prefix.pch; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 				F506C040013D9D8001CA16C8 /* DisplayPlusPref.tiff */,
 				F506C042013D9D8C01CA16C8 /* DisplayPlusPref.xib */,
+				3D26761B106A807B004F6C66 /* MonitorInfoView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -194,6 +203,8 @@
 				3DC3DCEC106926FA00C80EDB /* FlippedNSView.m */,
 				3DC3DD181069303000C80EDB /* FlippedNSBox.h */,
 				3DC3DD191069303000C80EDB /* FlippedNSBox.m */,
+				3D267621106A818D004F6C66 /* MonitorInfoView.h */,
+				3D267622106A818D004F6C66 /* MonitorInfoView.m */,
 			);
 			name = PrefPane;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 		3DC3DD89106935DE00C80EDB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3D267626106A8497004F6C66 /* CinemaDisplay.png */,
 				3DC3DD8D106935F600C80EDB /* enabled.tiff */,
 				3DC3DD8E106935F600C80EDB /* disabled.tiff */,
 			);
@@ -226,6 +238,7 @@
 				8D202CEB0486D31800D8A456 /* DisplayPlusPref.h in Headers */,
 				3DC3DCED106926FA00C80EDB /* FlippedNSView.h in Headers */,
 				3DC3DD1A1069303000C80EDB /* FlippedNSBox.h in Headers */,
+				3D267623106A818D004F6C66 /* MonitorInfoView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +312,8 @@
 				8D202CEF0486D31800D8A456 /* DisplayPlusPref.xib in Resources */,
 				3DC3DD8F106935F600C80EDB /* enabled.tiff in Resources */,
 				3DC3DD90106935F600C80EDB /* disabled.tiff in Resources */,
+				3D26761C106A807B004F6C66 /* MonitorInfoView.xib in Resources */,
+				3D267627106A8497004F6C66 /* CinemaDisplay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +345,7 @@
 				8D202CF10486D31800D8A456 /* DisplayPlusPref.mm in Sources */,
 				3DC3DCEE106926FA00C80EDB /* FlippedNSView.m in Sources */,
 				3DC3DD1B1069303000C80EDB /* FlippedNSBox.m in Sources */,
+				3D267624106A818D004F6C66 /* MonitorInfoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

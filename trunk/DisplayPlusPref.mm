@@ -9,6 +9,7 @@
 #import "DisplayPlusPref.h"
 
 #include <ApplicationServices/ApplicationServices.h>
+#import "MonitorInfoView.h"
 
 #define kMonitorViewHeight 150
 
@@ -149,94 +150,128 @@
 	
 	for (int i = 0; i < displayCount; i++) { //For each display...
 		
+		
+		
 		CGDirectDisplayID currentID = connectedDisplays[i];
 		
-		boolean_t displayasleep = CGDisplayIsAsleep(currentID);
 		
-		//Store serial...
-		theDisplaySerials[i] = CGDisplaySerialNumber(currentID);
-		
-		NSButton* tempButton = [[NSButton alloc] initWithFrame:NSRectFromCGRect(CGRectMake([viewToScroll frame].size.width-70-35,
-																						   (kMonitorViewHeight/2),
-																						   70, 25))];
-		
-		[tempButton setButtonType:NSMomentaryPushInButton];
-		[tempButton setBezelStyle:NSTexturedRoundedBezelStyle];
-		[tempButton setImagePosition:NSNoImage];
-		
-		if (displayasleep) {
-			[tempButton setTitle:@"Disabled"];
-		}
-		else {
-			[tempButton setTitle:@"Enabled"];
-		}
-		
-		//Add target to this class...
-		
-		[tempButton setTarget:self];
-		[tempButton setAction:@selector(handleButton:)];
-		[tempButton setNeedsDisplay:YES];
-		
-		//Add to buttonList...
-		
-		[buttonList addObject:tempButton];
+		MonitorInfoView* tmpView = [[MonitorInfoView alloc] initWithNibName:@"MonitorInfoView.nib" bundle:[self bundle] displayID:currentID];
+		[[tmpView view] setFrameOrigin:NSMakePoint(0, i*[[tmpView view] frame].size.height)];
+												   
+		[viewToScroll addSubview:[tmpView view]];
 		
 		
-		//Now create the view...
-		
-		FlippedNSBox* tempMainView = [[FlippedNSBox alloc] initWithFrame:
-				NSRectFromCGRect(CGRectMake(0, i*kMonitorViewHeight, [viewToScroll frame].size.width, kMonitorViewHeight))];
-		
-		[tempMainView setTitle:@""];
-		
-		[tempButton setFrame:NSMakeRect([tempMainView frame].size.width-70-35,
-										(kMonitorViewHeight/2)-25,
-										70, 25)];
-		
-		[tempMainView addSubview:tempButton];
-		
-		//Add a graphic...
-		
-		NSImageView* indicatorView = [[NSImageView alloc] initWithFrame:NSMakeRect(0,
-																				   0,
-																				   10,
-																				   20)];
-		if (displayasleep) {
-			[indicatorView setImage:[NSImage imageNamed:@"disabled.tiff"]];
-		}
-		else {
-			[indicatorView setImage:[NSImage imageNamed:@"enabled.tiff"]]; 
-		}
-		
-		[indicatorView setFrame:NSMakeRect([tempMainView frame].size.width-70-5,
-										   (kMonitorViewHeight/2)-80,
-										   10,
-										   kMonitorViewHeight)];
-		
-		[indicatorView setFrame:NSMakeRect(0,
-										   0,
-										   0,
-										   0)];
-			 
-		[tempMainView addSubview:indicatorView];
-	
-			 
-			 //Add a dividor line...
-			 
-		
-		
-		NSBox* verticalLine = [[NSBox alloc] initWithFrame:NSMakeRect([tempMainView frame].size.width-135,
-																	  5,
-																	  5,
-																	  kMonitorViewHeight-35)];
-		
-		[verticalLine setTitle:@""];
-		[tempMainView addSubview:verticalLine];
-		
-//		[tempMainView 
-		[viewToScroll addSubview:tempMainView];
-		
-		
+		//boolean_t displayasleep = CGDisplayIsAsleep(currentID);
+//		
+//		//Store serial...
+//		theDisplaySerials[i] = CGDisplaySerialNumber(currentID);
+//		
+//		NSButton* tempButton = [[NSButton alloc] initWithFrame:NSRectFromCGRect(CGRectMake([viewToScroll frame].size.width-70-35,
+//																						   (kMonitorViewHeight/2),
+//																						   70, 25))];
+//		
+//		[tempButton setButtonType:NSMomentaryPushInButton];
+//		[tempButton setBezelStyle:NSTexturedRoundedBezelStyle];
+//		[tempButton setImagePosition:NSNoImage];
+//		
+//		if (displayasleep) {
+//			[tempButton setTitle:@"Disabled"];
+//		}
+//		else {
+//			[tempButton setTitle:@"Enabled"];
+//		}
+//		
+//		//Add target to this class...
+//		
+//		[tempButton setTarget:self];
+//		[tempButton setAction:@selector(handleButton:)];
+//		[tempButton setNeedsDisplay:YES];
+//		
+//		//Add to buttonList...
+//		
+//		[buttonList addObject:tempButton];
+//		
+//		
+//		//Now create the view...
+//		
+//		FlippedNSBox* tempMainView = [[FlippedNSBox alloc] initWithFrame:
+//				NSRectFromCGRect(CGRectMake(0, i*kMonitorViewHeight, [viewToScroll frame].size.width, kMonitorViewHeight))];
+//		
+//		[tempMainView setTitle:@""];
+//		
+//		[tempButton setFrame:NSMakeRect([tempMainView frame].size.width-70-35,
+//										(kMonitorViewHeight/2)-25,
+//										70, 25)];
+//		
+//		[tempMainView addSubview:tempButton];
+//		
+//		//Add a graphic...
+//		
+//		NSImageView* indicatorView = [[NSImageView alloc] initWithFrame:NSMakeRect(0,
+//																				   0,
+//																				   10,
+//																				   20)];
+//		if (displayasleep) {
+//			[indicatorView setImage:[NSImage imageNamed:@"disabled.tiff"]];
+//		}
+//		else {
+//			[indicatorView setImage:[NSImage imageNamed:@"enabled.tiff"]]; 
+//		}
+//		
+//		[indicatorView setFrame:NSMakeRect([tempMainView frame].size.width-70-5,
+//										   (kMonitorViewHeight/2)-80,
+//										   10,
+//										   kMonitorViewHeight)];
+//		
+//		[indicatorView setFrame:NSMakeRect(25,
+//										   25,
+//										   10,
+//										   20)];
+//			 
+//		[tempMainView addSubview:indicatorView];
+//	
+//			 
+//			 //Add a dividor line...
+//			 
+//		
+//		
+//		NSBox* verticalLine = [[NSBox alloc] initWithFrame:NSMakeRect([tempMainView frame].size.width-135,
+//																	  5,
+//																	  5,
+//																	  kMonitorViewHeight-35)];
+//		
+//		[verticalLine setTitle:@""];
+//		[tempMainView addSubview:verticalLine];
+//		
+//		//Set some monitor specific information...
+//		
+//		NSTextField* monitorNameLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(5,
+//																					  5,
+//																					  50,
+//																					  25)];
+//		
+//		
+//		
+////		[monitorNameLabel setTitleWithMnemonic:CGDisplayModelNumber(currentID)];
+//		[monitorNameLabel setTitleWithMnemonic:@"twat!"];
+//		[monitorNameLabel setEditable:NO];
+//		[monitorNameLabel setSelectable:NO];
+//		
+//		[tempMainView addSubview:monitorNameLabel];
+//		
+////		[tempMainView 
+//		[viewToScroll addSubview:tempMainView];
+//		
+//		
+//		CGDirectDisplayID mainDisplay = CGMainDisplayID();
+//			
+//			CFDictionaryRef currentMode = CGDisplayCurrentMode(mainDisplay);
+//			
+//			//Print out current display mode FOR FUN
+//			
+//			NSLog(@"Main display details:");
+//			NSLog([[NSDictionary dictionaryWithDictionary:(NSDictionary*)currentMode] description]);
+//		
 		
 	}
 										
