@@ -20,8 +20,8 @@
 		3DC3DCEE106926FA00C80EDB /* FlippedNSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3DCEC106926FA00C80EDB /* FlippedNSView.m */; };
 		3DC3DD1A1069303000C80EDB /* FlippedNSBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC3DD181069303000C80EDB /* FlippedNSBox.h */; };
 		3DC3DD1B1069303000C80EDB /* FlippedNSBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3DD191069303000C80EDB /* FlippedNSBox.m */; };
-		3DC3DD8F106935F600C80EDB /* enabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3DC3DD8D106935F600C80EDB /* enabled.tiff */; };
-		3DC3DD90106935F600C80EDB /* disabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3DC3DD8E106935F600C80EDB /* disabled.tiff */; };
+		3DE6DF25106C0E6D0068E8FB /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6DF23106C0E6D0068E8FB /* disabled.png */; };
+		3DE6DF26106C0E6D0068E8FB /* enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6DF24106C0E6D0068E8FB /* enabled.png */; };
 		8D202CEA0486D31800D8A456 /* DisplayPlus_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCFA20370C41700C91783 /* DisplayPlus_Prefix.pch */; };
 		8D202CEB0486D31800D8A456 /* DisplayPlusPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F506C03C013D9D7901CA16C8 /* DisplayPlusPref.h */; };
 		8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
@@ -73,8 +73,8 @@
 		3DC3DCEC106926FA00C80EDB /* FlippedNSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedNSView.m; sourceTree = "<group>"; };
 		3DC3DD181069303000C80EDB /* FlippedNSBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedNSBox.h; sourceTree = "<group>"; };
 		3DC3DD191069303000C80EDB /* FlippedNSBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedNSBox.m; sourceTree = "<group>"; };
-		3DC3DD8D106935F600C80EDB /* enabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = enabled.tiff; sourceTree = "<group>"; };
-		3DC3DD8E106935F600C80EDB /* disabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = disabled.tiff; sourceTree = "<group>"; };
+		3DE6DF23106C0E6D0068E8FB /* disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disabled.png; sourceTree = "<group>"; };
+		3DE6DF24106C0E6D0068E8FB /* enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enabled.png; sourceTree = "<group>"; };
 		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* DisplayPlus.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayPlus.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
@@ -212,9 +212,9 @@
 		3DC3DD89106935DE00C80EDB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3DE6DF23106C0E6D0068E8FB /* disabled.png */,
+				3DE6DF24106C0E6D0068E8FB /* enabled.png */,
 				3D267626106A8497004F6C66 /* CinemaDisplay.png */,
-				3DC3DD8D106935F600C80EDB /* enabled.tiff */,
-				3DC3DD8E106935F600C80EDB /* disabled.tiff */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -310,10 +310,10 @@
 				8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */,
 				8D202CEE0486D31800D8A456 /* DisplayPlusPref.tiff in Resources */,
 				8D202CEF0486D31800D8A456 /* DisplayPlusPref.xib in Resources */,
-				3DC3DD8F106935F600C80EDB /* enabled.tiff in Resources */,
-				3DC3DD90106935F600C80EDB /* disabled.tiff in Resources */,
 				3D26761C106A807B004F6C66 /* MonitorInfoView.xib in Resources */,
 				3D267627106A8497004F6C66 /* CinemaDisplay.png in Resources */,
+				3DE6DF25106C0E6D0068E8FB /* disabled.png in Resources */,
+				3DE6DF26106C0E6D0068E8FB /* enabled.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
