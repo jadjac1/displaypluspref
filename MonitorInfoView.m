@@ -27,14 +27,30 @@
 	
 	
 	//Set the button...
+	//Set graphical indicactor...
 	boolean_t displayasleep = CGDisplayIsAsleep(theDisplayID);
 	
 	if (displayasleep) {
-		[enabledDisabledButton setTitle:@"Disabled"];
+		[enabledDisabledButton setTitle:@"Enable"];
+		//[enabledGraphicIndicator setImage:[NSImage imageNamed:@"disabled.png"]];
 	}
 	else {
-		[enabledDisabledButton setTitle:@"Enabled"];
+		[enabledDisabledButton setTitle:@"Disable"];
+		//[enabledGraphicIndicator setImage:[NSImage imageNamed:@"enabled.png"]];
+		//[enabledDisabledButton setNeedsDisplay:YES];
 	}
+	
+	CGDisplayCount displayCount;
+	//Get display count...
+	CGGetOnlineDisplayList(0, NULL, &displayCount);
+	
+	if (displayCount == 1) {
+		[enabledDisabledButton setEnabled:NO];
+	}
+	
+	
+	
+	
 	
 	//Set resolution label...
 	NSDictionary* currentDisplayMode = [NSDictionary dictionaryWithDictionary:(NSDictionary*)CGDisplayCurrentMode(theDisplayID)];
@@ -60,7 +76,7 @@
 	[displayResolutionLabel setTitleWithMnemonic:tmpString];
 	
 	//Set internal/external label...
-	if (CGDisplayIsBuiltin(theDisplayID)) {
+	if (!CGDisplayIsBuiltin(theDisplayID)) {
 		[internalExternalLabel setTitleWithMnemonic:@"Internal Display"];
 	}
 	else {

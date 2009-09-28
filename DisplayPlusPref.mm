@@ -284,7 +284,8 @@
 	
 	if (sender == theDisplayPreferencesButton) {
 		//Open display prefs
-		NSLog(@"Opening Display Preferences...");
+		//NSLog(@"Opening Display Preferences...");
+		[[NSWorkspace sharedWorkspace] openFile:@"/System/Library/PreferencePanes/Displays.prefPane" withApplication:nil andDeactivate:NO];
 		
 	}
 	//Other buttons...
