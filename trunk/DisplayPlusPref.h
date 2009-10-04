@@ -20,7 +20,7 @@
 	FlippedNSView*					viewToScroll;
 	//NSClipView*				theClipView;
 	
-	uint32_t*				theDisplaySerials;
+	//uint32_t*				theDisplaySerials;
 	CGDisplayCount			displayCount;
 	
 	NSMutableArray*			buttonList;

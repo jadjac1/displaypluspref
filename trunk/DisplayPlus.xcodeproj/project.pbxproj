@@ -9,19 +9,15 @@
 /* Begin PBXBuildFile section */
 		3D26761C106A807B004F6C66 /* MonitorInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D26761B106A807B004F6C66 /* MonitorInfoView.xib */; };
 		3D267623106A818D004F6C66 /* MonitorInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D267621106A818D004F6C66 /* MonitorInfoView.h */; };
-		3D267624106A818D004F6C66 /* MonitorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D267622106A818D004F6C66 /* MonitorInfoView.m */; };
+		3D267624106A818D004F6C66 /* MonitorInfoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D267622106A818D004F6C66 /* MonitorInfoView.mm */; };
 		3D267627106A8497004F6C66 /* CinemaDisplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D267626106A8497004F6C66 /* CinemaDisplay.png */; };
-		3DA3FA8510682BEC0063AF68 /* DisplayPlusCommandLine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3FA8410682BEC0063AF68 /* DisplayPlusCommandLine.mm */; };
-		3DA3FA9610682C540063AF68 /* DisplayPlusCommandLine_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 3DA3FA8E10682C270063AF68 /* DisplayPlusCommandLine_Prefix.pch */; };
-		3DA3FAA510682D190063AF68 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA3FAA410682D190063AF68 /* Carbon.framework */; };
-		3DA3FAAB10682D5B0063AF68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
-		3DA3FAC5106833620063AF68 /* DisplayPlusCarbonUtility in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DA3FA7510682B120063AF68 /* DisplayPlusCarbonUtility */; };
 		3DC3DCED106926FA00C80EDB /* FlippedNSView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC3DCEB106926FA00C80EDB /* FlippedNSView.h */; };
 		3DC3DCEE106926FA00C80EDB /* FlippedNSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3DCEC106926FA00C80EDB /* FlippedNSView.m */; };
 		3DC3DD1A1069303000C80EDB /* FlippedNSBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC3DD181069303000C80EDB /* FlippedNSBox.h */; };
 		3DC3DD1B1069303000C80EDB /* FlippedNSBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3DD191069303000C80EDB /* FlippedNSBox.m */; };
 		3DE6DF25106C0E6D0068E8FB /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6DF23106C0E6D0068E8FB /* disabled.png */; };
 		3DE6DF26106C0E6D0068E8FB /* enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6DF24106C0E6D0068E8FB /* enabled.png */; };
+		3DEB95901078F99C00BB8EC3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEB958F1078F99C00BB8EC3 /* IOKit.framework */; };
 		8D202CEA0486D31800D8A456 /* DisplayPlus_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCFA20370C41700C91783 /* DisplayPlus_Prefix.pch */; };
 		8D202CEB0486D31800D8A456 /* DisplayPlusPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F506C03C013D9D7901CA16C8 /* DisplayPlusPref.h */; };
 		8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
@@ -32,16 +28,6 @@
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3DA3FAB510682E7A0063AF68 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DA3FA7410682B120063AF68;
-			remoteInfo = DisplayPlusCarbonUtility;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		3DA3FAB210682D8F0063AF68 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -49,7 +35,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				3DA3FAC5106833620063AF68 /* DisplayPlusCarbonUtility in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +48,8 @@
 		32DBCFA20370C41700C91783 /* DisplayPlus_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayPlus_Prefix.pch; sourceTree = "<group>"; };
 		3D26761B106A807B004F6C66 /* MonitorInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonitorInfoView.xib; sourceTree = "<group>"; };
 		3D267621106A818D004F6C66 /* MonitorInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorInfoView.h; sourceTree = "<group>"; };
-		3D267622106A818D004F6C66 /* MonitorInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorInfoView.m; sourceTree = "<group>"; };
+		3D267622106A818D004F6C66 /* MonitorInfoView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MonitorInfoView.mm; sourceTree = "<group>"; };
 		3D267626106A8497004F6C66 /* CinemaDisplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CinemaDisplay.png; sourceTree = "<group>"; };
-		3DA3FA7510682B120063AF68 /* DisplayPlusCarbonUtility */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DisplayPlusCarbonUtility; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA3FA8410682BEC0063AF68 /* DisplayPlusCommandLine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DisplayPlusCommandLine.mm; sourceTree = "<group>"; };
 		3DA3FA8E10682C270063AF68 /* DisplayPlusCommandLine_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayPlusCommandLine_Prefix.pch; sourceTree = "<group>"; };
 		3DA3FAA410682D190063AF68 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -75,6 +59,7 @@
 		3DC3DD191069303000C80EDB /* FlippedNSBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedNSBox.m; sourceTree = "<group>"; };
 		3DE6DF23106C0E6D0068E8FB /* disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disabled.png; sourceTree = "<group>"; };
 		3DE6DF24106C0E6D0068E8FB /* enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enabled.png; sourceTree = "<group>"; };
+		3DEB958F1078F99C00BB8EC3 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* DisplayPlus.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayPlus.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
@@ -85,21 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3DA3FA7310682B120063AF68 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DA3FAA510682D190063AF68 /* Carbon.framework in Frameworks */,
-				3DA3FAAB10682D5B0063AF68 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D202CF20486D31800D8A456 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */,
 				8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */,
+				3DEB95901078F99C00BB8EC3 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +129,7 @@
 		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DEB958F1078F99C00BB8EC3 /* IOKit.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 				F506C035013D953901CA16C8 /* PreferencePanes.framework */,
 				3DA3FAA410682D190063AF68 /* Carbon.framework */,
@@ -172,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				8D202CF80486D31800D8A456 /* DisplayPlus.prefPane */,
-				3DA3FA7510682B120063AF68 /* DisplayPlusCarbonUtility */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,7 +181,7 @@
 				3DC3DD181069303000C80EDB /* FlippedNSBox.h */,
 				3DC3DD191069303000C80EDB /* FlippedNSBox.m */,
 				3D267621106A818D004F6C66 /* MonitorInfoView.h */,
-				3D267622106A818D004F6C66 /* MonitorInfoView.m */,
+				3D267622106A818D004F6C66 /* MonitorInfoView.mm */,
 			);
 			name = PrefPane;
 			sourceTree = "<group>";
@@ -222,14 +199,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3DA3FA9D10682C590063AF68 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DA3FA9610682C540063AF68 /* DisplayPlusCommandLine_Prefix.pch in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D202CE90486D31800D8A456 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,23 +214,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3DA3FA7410682B120063AF68 /* DisplayPlusCarbonUtility */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3DA3FA8310682B320063AF68 /* Build configuration list for PBXNativeTarget "DisplayPlusCarbonUtility" */;
-			buildPhases = (
-				3DA3FA9D10682C590063AF68 /* Headers */,
-				3DA3FA7210682B120063AF68 /* Sources */,
-				3DA3FA7310682B120063AF68 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DisplayPlusCarbonUtility;
-			productName = DisplayPlusCarbonUtility;
-			productReference = 3DA3FA7510682B120063AF68 /* DisplayPlusCarbonUtility */;
-			productType = "com.apple.product-type.tool";
-		};
 		8D202CE80486D31800D8A456 /* DisplayPlus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "DisplayPlus" */;
@@ -276,7 +228,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3DA3FAB610682E7A0063AF68 /* PBXTargetDependency */,
 			);
 			name = DisplayPlus;
 			productInstallPath = "$(HOME)/Library/PreferencePanes";
@@ -296,7 +247,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3DA3FA7410682B120063AF68 /* DisplayPlusCarbonUtility */,
 				8D202CE80486D31800D8A456 /* DisplayPlus */,
 			);
 		};
@@ -330,14 +280,6 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3DA3FA7210682B120063AF68 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DA3FA8510682BEC0063AF68 /* DisplayPlusCommandLine.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D202CF00486D31800D8A456 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,19 +287,11 @@
 				8D202CF10486D31800D8A456 /* DisplayPlusPref.mm in Sources */,
 				3DC3DCEE106926FA00C80EDB /* FlippedNSView.m in Sources */,
 				3DC3DD1B1069303000C80EDB /* FlippedNSBox.m in Sources */,
-				3D267624106A818D004F6C66 /* MonitorInfoView.m in Sources */,
+				3D267624106A818D004F6C66 /* MonitorInfoView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3DA3FAB610682E7A0063AF68 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3DA3FA7410682B120063AF68 /* DisplayPlusCarbonUtility */;
-			targetProxy = 3DA3FAB510682E7A0063AF68 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
@@ -442,44 +376,6 @@
 			};
 			name = Release;
 		};
-		3DA3FA7710682B130063AF68 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
-				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
-				PRODUCT_NAME = DisplayPlusCarbonUtility;
-				SDKROOT = macosx10.5;
-				VALID_ARCHS = i386;
-			};
-			name = Debug;
-		};
-		3DA3FA7810682B130063AF68 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
-				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
-				PRODUCT_NAME = DisplayPlusCarbonUtility;
-				SDKROOT = macosx10.5;
-				VALID_ARCHS = i386;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -497,15 +393,6 @@
 			buildConfigurations = (
 				1DBD214D08BA80EA00186707 /* Debug */,
 				1DBD214E08BA80EA00186707 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3DA3FA8310682B320063AF68 /* Build configuration list for PBXNativeTarget "DisplayPlusCarbonUtility" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3DA3FA7710682B130063AF68 /* Debug */,
-				3DA3FA7810682B130063AF68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

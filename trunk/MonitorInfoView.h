@@ -16,6 +16,7 @@
 	IBOutlet NSImageView*	enabledGraphicIndicator;
 	IBOutlet NSTextField*	displayResolutionLabel;
 	IBOutlet NSTextField*	internalExternalLabel;
+	IBOutlet NSTextField*	displayNameLabel;
 	
 	CGDirectDisplayID		theDisplayID;
 	

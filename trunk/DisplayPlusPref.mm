@@ -126,25 +126,31 @@
 	
 	//Clear the buttons
 	
-	[buttonList removeAllObjects];
+	//[buttonList removeAllObjects];
 	
 	//okies, first we need to detect the monitors...
 	
 	//Using an array of serial numbers...
-	
+	CGDisplayErr theError;
 	//Get display count...
-	CGGetOnlineDisplayList(0, NULL, &displayCount);
+	theError = CGGetOnlineDisplayList(0, NULL, &displayCount);
+	
 	
 	//Display count achieved...
 	//Now get some IDs...
 	CGDirectDisplayID* connectedDisplays = new CGDirectDisplayID[displayCount];
+	theError = CGGetOnlineDisplayList(displayCount, connectedDisplays, &displayCount);
 	
 	//Set up serial array
-	if (theDisplaySerials != NULL) {
-		delete theDisplaySerials;
-	}
+//	if (theDisplaySerials != NULL) {
+//		delete theDisplaySerials;
+//	}
+//	
+//	theDisplaySerials = new uint32_t[displayCount];
 	
-	theDisplaySerials = new uint32_t[displayCount];
+	//Hack...
+	
+	//connectedDisplays[0] = CGMainDisplayID();
 	
 	//Now.... loop those IDs...
 	
@@ -153,7 +159,8 @@
 		
 		
 		CGDirectDisplayID currentID = connectedDisplays[i];
-		
+		//CGDirectDisplayID currentID = i;
+		//NSLog([NSString stringWithFormat:@"DisplayID: %d",currentID]);
 		
 		MonitorInfoView* tmpView = [[MonitorInfoView alloc] initWithNibName:@"MonitorInfoView.nib" bundle:[self bundle] displayID:currentID];
 		[[tmpView view] setFrameOrigin:NSMakePoint(0, i*[[tmpView view] frame].size.height)];
