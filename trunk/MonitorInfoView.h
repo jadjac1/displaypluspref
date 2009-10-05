@@ -20,6 +20,8 @@
 	
 	CGDirectDisplayID		theDisplayID;
 	
+	NSBundle*				prefPaneBundleRef;
+	
 	
 }
 

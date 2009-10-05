@@ -9,8 +9,9 @@
 #import "MonitorInfoView.h"
 //#include <IOService.h>
 #include <IOKit/IOKitLib.h>
+#include <IOKit/pwr_mgt/IOPMLib.h>
 //#include <Kernel/IOKit/IOService.h>
-
+//#include <IOPowerConnection.h>
 
 @implementation MonitorInfoView
 
@@ -18,6 +19,7 @@
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		//theBox = view;
 		theDisplayID = theid;
+		prefPaneBundleRef = nibBundleOrNil;
 	}
 	
 	return self;
@@ -35,11 +37,13 @@
 	
 	if (displayasleep) {
 		[enabledDisabledButton setTitle:@"Enable"];
-		//[enabledGraphicIndicator setImage:[NSImage imageNamed:@"disabled.png"]];
+		NSString* imagePath = [prefPaneBundleRef pathForResource:@"disabled" ofType:@"png"];
+		[enabledGraphicIndicator setImage:[[NSImage alloc] initWithContentsOfFile:imagePath]];
 	}
 	else {
 		[enabledDisabledButton setTitle:@"Disable"];
-		//[enabledGraphicIndicator setImage:[NSImage imageNamed:@"enabled.png"]];
+		NSString* imagePath = [prefPaneBundleRef pathForResource:@"enabled" ofType:@"png"];
+		[enabledGraphicIndicator setImage:[[NSImage alloc] initWithContentsOfFile:imagePath]];
 		//[enabledDisabledButton setNeedsDisplay:YES];
 	}
 	
@@ -117,15 +121,25 @@
 - (IBAction) handleButtons:(id)sender {
 	if (sender == enabledDisabledButton) {
 		NSLog(@"LOL you pressed the button....");
+		kern_return_t                kr;
+		
 		
 		//Get an IO Service port...
 		
 		io_service_t ioServicePort = CGDisplayIOServicePort(theDisplayID);
+		io_connect_t ioConnection;
 		//NSLog([@"IOService port for display: " stringByAppendingFormat:@"%d",ioServicePort]);
 		//Now we have an IO Service port.... need to send it a command...
 		
 		//setPowerLevel
+		//Need to connect to an IOService?
+		kr = IOServiceOpen(ioServicePort, mach_task_self(), kIOFBServerConnectType, &ioConnection);
+		NSAssert(kr == KERN_SUCCESS,@"WTF No success on connection.... odd...");
 		
+		IOPMSetAggressiveness(ioConnection, <#unsigned long type#>, <#unsigned long aggressiveness#>)		
+		
+		//Make sure we close IOConnection...
+		IOServiceClose(ioConnection);
 		
 	}
 }
